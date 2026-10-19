@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ملف القضايا</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Tahoma, Arial, sans-serif;
+      color: #edf2f8;
+      background:
+        radial-gradient(ellipse at top, #263b55 0%, transparent 60%),
+        #101927;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 650px;
+      text-align: center;
+      border: 1px solid #52657d;
+      background: rgba(16, 25, 39, 0.92);
+      padding: 42px 24px;
+      border-radius: 20px;
+      box-shadow: 0 15px 50px #0007;
+    }
+
+    .symbol {
+      font-size: 54px;
+      margin-bottom: 12px;
+    }
+
+    .tag {
+      color: #aebfd2;
+      letter-spacing: 3px;
+      font-size: 12px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 8vw, 48px);
+      margin: 18px 0;
+      color: #e3ebf5;
+    }
+
+    .line {
+      width: 100px;
+      height: 2px;
+      background: #9bafc5;
+      margin: 22px auto;
+    }
+
+    p {
+      color: #bac7d6;
+      line-height: 1.9;
+    }
+
+    button {
+      margin-top: 24px;
+      padding: 15px 35px;
+      border: 1px solid #dce5ef;
+      border-radius: 8px;
+      background: #dce5ef;
+      color: #101927;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #b9c9dc;
+    }
+
+    #message {
+      margin-top: 22px;
+      color: #dce5ef;
+      display: none;
+    }
+
+    footer {
+      margin-top: 32px;
+      color: #8192a7;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="symbol">⌕</div>
+    <div class="tag">مكتب التحقيقات</div>
+
+    <h1>ملف القضايا</h1>
+
+    <div class="line"></div>
+
+    <p>
+      كل دليل يخفي حقيقة، وكل حقيقة تقرّبك من الحل.
+    </p>
+
+    <button onclick="startGame()">ابدأ التحقيق</button>
+
+    <p id="message">
+      أهلًا بك في مكتب التحقيقات.<br>
+      استعد لفتح أول قضية: الغرفة 17.
+    </p>
+
+    <footer>نظام التحقيقات السري | ملف رقم 017</footer>
+  </main>
+
+  <script>
+    function startGame() {
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+</body>
+</html>
